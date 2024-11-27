@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Style+Script&display=swap');
+
+/* Common Styles */
+* {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* End of Common Styles */
+
+/* Navbar */
+
+.navbar {
+  background-color: #000;
+  width: 100%;
+  height: 30rem;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.logo_image {
+  height: 22rem;
+}
+
+/* End of Navbar */
+
+/* Section 1 */
+
+.section-1 {
+  width: 100%;
+  padding: 5rem 0 15rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+  background: linear-gradient(rgba(60, 49, 49, 0.2),
+      rgba(60, 49, 49, 0.3)),
+    url("../images/kafe-nar.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.section-1-heading {
+  font-size: 5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 3rem;
+
+}
+
+.services {
+  display: flex;
+}
+
+.service {
+  width: 35rem;
+  text-align: center;
+  margin: 0 5rem;
+}
+
+.service i {
+  font-size: 6rem;
+  color: rgb(172, 29, 37);
+  margin: 2rem 0;
+}
+
+.service-heading {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.service-btn {
+  width: 20rem;
+  padding: 1.5rem;
+  background-color: transparent;
+  border: none;
+  background-color: #6f6e6e;
+  color: rgb(172, 29, 37);
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.service-btn:hover {
+  color: #6f6e6e;
+  background-color: rgb(172, 29, 37);
+}
+
+
+/* End of Section 1 */
+
+
+/* Section 2 */
+
+.section-2 {
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 35vh;
+  background-color: #000;
+  padding: 2rem 0;
+}
+
+.section-2 h1 {
+  color: #a7a7a7;
+  font-size: 3rem;
+}
+
+.google-map {
+  width: 40rem;
+  height: 40rem;
+}
+
+
+/* End of Section 2 */
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  height: 15rem;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.kontakt {
+  font-size: 1.6rem;
+  color: #a7a7a7;
+}
+
+.social-list {
+  align-self: center;
+}
+
+.social-list a {
+  margin: 0 2rem;
+}
+
+a:hover i {
+  color: rgb(172, 29, 37);
+}
+
+.social-list i {
+  font-size: 2rem;
+  color: #a7a7a7;
+}
+
+
+/* End of Footer */
+
+
+
+/* Scroll up button */
+
+.scroll-up-btn {
+  width: 5rem;
+  height: 5rem;
+  background-color: rgb(172, 29, 37);
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s;
+}
+
+.scroll-up-btn:hover {
+  background-color: rgb(254, 254, 254);
+  color: rgb(172, 29, 37);
+}
+
+/* End of Scroll up Button */
+
+/* Responsivness */
+
+@media (max-width:1350px) {
+  html {
+    font-size: 55%;
+  }
+
+  .service {
+    margin: 0 3rem;
+  }
+}
+
+@media (max-width:1100px) {
+  html {
+    font-size: 50%;
+  }
+
+  .service {
+    margin: 0;
+  }
+
+}
+
+@media(max-width:900px) {
+  .services {
+    width: 95%;
+  }
+
+  .service {
+    width: 30rem;
+    margin: 0 2rem;
+  }
+
+  .service i {
+    font-size: 4rem;
+  }
+
+  .service-btn {
+    width: 15rem;
+    padding: 1rem;
+  }
+}
+
+@media(max-width:650px) {
+  html {
+    font-size: 40%;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 60%;
+    margin-bottom: 4rem;
+  }
+
+  .google-map {
+    width: 40%;
+    height: 100%;
+  }
+}
+
+/* End of Responsivness */

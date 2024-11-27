@@ -1,0 +1,831 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Style+Script&display=swap');
+
+/* Common Styles */
+* {
+    font-family: 'Poiret One', sans-serif;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.section-heading {
+    font-family: 'Style Script', serif;
+    font-size: 8rem;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0.3rem 0.3rem 0.3rem #000;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* End of Common Styles */
+
+/* Navbar */
+
+.navbar {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 12rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    background-color: #000;
+
+}
+
+.menu {
+    display: none;
+}
+
+.logo {
+    height: 12rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.3rem;
+}
+
+.nav-link {
+    font-size: 4rem;
+    color: #fff;
+    width: 22rem;
+    margin: 0 5rem;
+    text-align: center;
+    padding: 0.2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+a:hover {
+    color: rgb(172, 29, 37);
+}
+
+
+/* End of Navbar */
+
+/* Section 1 - O nama */
+
+.section-1 {
+    background: linear-gradient(#000, rgb(172, 29, 37));
+    width: 100%;
+    padding: 16rem 14rem 10rem 14rem;
+}
+
+.o-nama-description {
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+}
+
+/* End of Section 1 */
+
+/* Section 2 - Zašto baš nar */
+
+.section-2 {
+    width: 100%;
+    height: 95vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+
+}
+
+.banner-nar {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.banner-nar h1 {
+    text-align: left;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.banner-nar:hover h1 {
+    opacity: 1;
+}
+
+.banner-nar p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.7rem;
+    color: #fff;
+    width: 80%;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+}
+
+.banner-nar:hover p {
+    opacity: 1;
+}
+
+
+/* End of Section 2 */
+
+/* Section 3 - Galerija*/
+.section-3 {
+    width: 100%;
+    background-color: #000;
+    padding: 5rem 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5rem 0;
+}
+
+.gallery-link {
+    position: relative;
+    margin: 4rem 1rem;
+}
+
+.gallery-link::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 2rem;
+    width: 0;
+    height: 0.2rem;
+    background-color: #fff;
+    transition: width 0.5s;
+}
+
+.gallery-link:hover::after {
+    width: 70%;
+}
+
+.art-img {
+    width: 24vw;
+    height: 15vw;
+    object-fit: cover;
+    box-shadow: 0.3rem 0.3rem 0.1rem #111, 0.5rem 0.5rem 0.1rem #222,
+        0.7rem 0.7rem 0.1rem #333, 0.9rem 0.9rem 0.1rem rgb(172, 29, 37);
+    transition: all 0.5s;
+}
+
+.gallery-link:hover .art-img {
+    box-shadow: 1rem 1rem 0.1rem #111, 2rem 2rem 0.1rem #222,
+        3rem 3rem 0.1rem #333, 4rem 4rem 0.1rem rgb(172, 29, 37);
+    transform: scale(1.1);
+    filter: blur(0.5rem);
+    opacity: 0.5;
+}
+
+.art-name {
+    position: absolute;
+    top: 4rem;
+    left: 5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s;
+}
+
+.gallery-link:hover .art-name {
+    width: 100%;
+}
+
+/* Section 4 - Kafić */
+
+.section-4 {
+    width: 100%;
+    height: 80vh;
+    perspective: 100rem;
+    overflow: hidden;
+    background-color: #000;
+}
+
+
+.img-kafe-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.img-kafe-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+
+#btn {
+    background-color: rgb(172, 29, 37);
+    color: #fff;
+    font-weight: 500;
+    font-size: 3rem;
+    height: 7rem;
+    width: 17rem;
+    border: none;
+    border-radius: 20%;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    margin-left: -8.5rem;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: #fff;
+    color: rgb(172, 29, 37);
+}
+
+
+/* End of Section 4 */
+
+/* Section 5 - web shop */
+
+.section-5 {
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem 0;
+
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+}
+
+
+.card {
+    width: 30rem;
+    background-color: rgb(172, 29, 37);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1rem 1rem 1rem #000;
+    position: relative;
+}
+
+
+.card::before {
+    content: "";
+    height: 100%;
+    width: 1rem;
+    background-color: rgb(172, 29, 37);
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    transform: skewY(45deg);
+    transform-origin: right;
+    box-shadow: -0.1rem -0.1rem 0.1rem #000;
+}
+
+.card::after {
+    content: "";
+    width: 100%;
+    height: 1rem;
+    background-color: rgb(172, 29, 37);
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    transform: skewX(45deg);
+    transform-origin: bottom;
+    box-shadow: -0.1rem -0.1rem 0.1rem #000;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #fff;
+    margin: 2rem 0;
+    text-align: center;
+    text-shadow: 0.15rem 0.15rem 0.15rem #000;
+}
+
+.card-btn {
+    font-family: 'Poppins', sans-serif;
+    width: 70%;
+    background-color: #111;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    border: none;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    box-shadow: -0.2rem -0.2rem 0.2rem #000;
+}
+
+.card-btn:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+/* End of Section 5 */
+
+
+/* Footer */
+
+.section-6 {
+    width: 100%;
+    height: 27rem;
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0;
+    position: relative;
+    align-items: flex-start;
+}
+
+.section-6-text {
+    text-transform: uppercase;
+}
+
+.section-6-heading {
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: rgb(172, 29, 37);
+}
+
+.section-6-paragraph {
+    font-size: 2rem;
+    color: #888;
+}
+
+.signup-form {
+    display: flex;
+    align-items: center;
+}
+
+.signup-form-input {
+    width: 35rem;
+    height: 5rem;
+    padding: 1rem;
+    border: 0.2rem solid rgb(172, 29, 37);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: rgb(172, 29, 37);
+}
+
+.signup-form-input::placeholder {
+    color: rgb(172, 29, 37);
+}
+
+.signup-form-btn {
+    position: relative;
+    left: -4.5rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: #333;
+    color: rgb(172, 29, 37);
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 3rem;
+    font-size: 1.7rem;
+    font-weight: 200;
+    color: #888;
+    letter-spacing: 0.1rem;
+    border-top: 0.1rem solid #888;
+    padding-top: 5rem;
+    width: 100%;
+    text-align: center;
+
+}
+
+/* End of Footer */
+
+
+/* Scroll up button */
+
+.scroll-up-btn {
+    width: 5rem;
+    height: 5rem;
+    background-color: rgb(172, 29, 37);
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s;
+}
+
+.scroll-up-btn:hover {
+    background-color: #fff;
+    color: rgb(172, 29, 37);
+}
+
+/* End of Scroll up Button */
+
+
+/* Responsive */
+@media(hover: none) {
+
+    /* Touch screen devices */
+    .banner-nar h1 {
+        opacity: 1;
+        font-weight: 900;
+    }
+
+    .banner-nar p {
+        opacity: 1;
+    }
+
+    .gallery-link::after {
+        width: 70%;
+    }
+
+
+    .art-name {
+        width: 100%;
+    }
+
+}
+
+
+@media(max-width: 1450px) {
+
+    .nav-link {
+        font-size: 3.5rem;
+        margin: 0 2.5rem;
+    }
+
+    .o-nama-description,
+    .banner-nar p {
+        font-size: 2rem;
+    }
+
+    .banner-nar {
+        top: 20%;
+    }
+
+    .art-name {
+        top: 3.5rem;
+        font-size: 1.5rem;
+    }
+
+}
+
+
+@media (max-width: 1150px) {
+
+    .navbar {
+        justify-content: start;
+        padding-left: 2rem;
+    }
+
+    .menu {
+        display: block;
+        width: 4rem;
+        height: 2.5rem;
+        position: absolute;
+        top: 6rem;
+        right: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .menu-line {
+        width: 100%;
+        height: 0.3rem;
+        background-color: rgb(172, 29, 37);
+        transition: transform 0.5s;
+    }
+
+    .change .menu-line-1 {
+        transform: rotate(40deg) translate(0.5rem, 1rem);
+    }
+
+    .change .menu-line-2 {
+        transform: translate(-0.2rem, 2rem);
+    }
+
+    .change .menu-line-3 {
+        transform: rotate(-40deg) translate(0.5rem, -1rem);
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 12rem;
+        right: -33rem;
+        flex-direction: column;
+        height: calc(100vh - 12rem);
+        background-color: #000;
+        justify-content: start;
+        padding: 2rem;
+        transition: right 0.5s;
+    }
+
+    .change .nav-list {
+        right: 0;
+    }
+
+    .nav-link {
+        margin: 1rem;
+        font-size: 3rem;
+    }
+
+    .section-heading {
+        font-size: 6rem;
+    }
+
+    .section-2 {
+        height: 85vh;
+    }
+
+    .banner-nar {
+        top: 17%;
+    }
+
+    .cards-container {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: 5rem;
+    }
+
+    .gallery-link {
+        width: 40rem;
+        height: 25rem;
+        margin: 5rem;
+    }
+
+    .art-img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    #btn {
+        font-size: 2rem;
+        height: 5rem;
+        width: 14rem;
+        left: 50%;
+        margin-left: -7rem;
+    }
+
+    .section-6 {
+        height: 25rem;
+    }
+
+    section-6-heading {
+        font-size: 3rem;
+    }
+
+    .section-6-paragraph {
+        font-size: 1.5rem;
+    }
+
+    .scroll-up-btn {
+        width: 3.8rem;
+        height: 3.8rem;
+        bottom: 2rem;
+        right: 2rem;
+        font-size: 1.4rem;
+    }
+
+}
+
+
+@media(max-width: 780px) {
+
+    .section-heading {
+        font-size: 5rem;
+    }
+
+    .section-2 {
+        height: 75vh;
+    }
+
+    .banner-nar p,
+    .o-nama-description {
+        font-size: 1.7rem;
+    }
+
+    .gallery {
+        margin-top: 2rem;
+    }
+
+    .cards-container {
+        margin-top: 3rem;
+    }
+
+    .card-name {
+        font-size: 1.7rem;
+    }
+
+    .section-4 {
+        height: 60vh;
+    }
+
+    .section-6 {
+        height: 20rem;
+    }
+
+    .section-6-heading {
+        font-size: 2.5rem;
+    }
+
+    .section-6-paragraph {
+        font-size: 1.3rem;
+    }
+
+    .signup-form-input {
+        width: 25rem;
+        font-size: 1.3rem;
+    }
+
+    .copyright {
+        font-size: 1.4rem;
+        padding-top: 2rem;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .nav-link {
+        font-size: 2.3rem;
+    }
+
+    .menu {
+        top: 4rem;
+        right: 1rem;
+    }
+
+    .menu-line {
+        width: 65%;
+    }
+
+    .navbar {
+        height: 8rem;
+    }
+
+    .logo {
+        height: 8rem;
+    }
+
+    .nav-list {
+        top: 8rem;
+        height: 100vh;
+    }
+
+    .section-2 {
+        height: 65vh;
+    }
+
+    .banner-nar p,
+    .o-nama-description {
+        font-size: 1.5rem;
+    }
+
+    .art-name {
+        font-size: 1.2rem;
+        top: 5rem;
+    }
+
+    .card-name {
+        font-size: 1.5rem;
+    }
+
+    .section-6-heading {
+        font-size: 1.8rem;
+    }
+
+    .section-6-paragraph {
+        font-size: 1rem;
+    }
+
+    .signup-form-input {
+        width: 19rem;
+        height: 3.8rem;
+        font-size: 0.9rem;
+    }
+
+    .section-6 {
+        height: 25rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .section-6-text {
+        margin-bottom: 3rem;
+    }
+
+    .signup-form-btn {
+        left: -3.5rem;
+        width: 3.2rem;
+        height: 3.2rem;
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width: 530px) {
+    .section-heading {
+        font-size: 3.5rem;
+    }
+
+    .section-1 {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .o-nama-description {
+        font-size: 1.1rem;
+        padding-top: 5rem;
+    }
+
+    .banner-nar p,
+    .o-nama-description {
+        font-size: 1.2rem;
+    }
+
+    .section-3 {
+        padding: 2rem 0;
+    }
+
+    .section-4 {
+        height: 50vh;
+    }
+
+    #btn {
+        font-size: 1.5rem;
+        height: 4rem;
+        width: 12rem;
+        left: 50%;
+        margin-left: -6rem;
+    }
+
+    .section-6 {
+        height: 22rem;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+
+}
+
+/* End of Responsive */
